@@ -22,27 +22,21 @@ cp .env.example .env
 ### Clonar el repositorio:
 
 ```bash
-git clone https://github.com/jpaddeo/coderhouse-fullstack.git
-```
-
-### Navegar al directorio del proyecto:
-
-```bash
-cd coderhouse-fullstack/backend_1/entrega2
+git clone https://github.com/jpaddeo/coderhouse-fullstack-entregas.git
 ```
 
 ### Instalar las dependencias y ejecutar la aplicación
-
-#### Usando pnpm
-
-```bash
-pnpm install && pnpm dev
-```
 
 #### Usando npm
 
 ```bash
 npm install && npm run dev
+```
+
+#### Usando pnpm
+
+```bash
+pnpm install && pnpm dev
 ```
 
 ## Estructura de carpetas
@@ -56,12 +50,14 @@ entrega1/
 │   ├── routes/
 │   ├── services/
 │   ├── utils/
+│   ├── views/
+│   └── server-socket.js
 │   └── server.js
-│
 ├── .gitignore
+├── consigna.md
+├── package-lock.json
 ├── package.json
 ├── README.md
-├── CONSIGNA.md
 └── .env.example
 ```
 
