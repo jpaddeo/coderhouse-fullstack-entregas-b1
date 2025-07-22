@@ -1,0 +1,31 @@
+{
+  "name": "backend1_entrega1",
+  "version": "1.0.0",
+  "description": "Entrega 1 del curso Programación Backend I del carrera de Desarrollo Web Fullstack de Coderhouse.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --ignore data/ src/server.js",
+    "dev:experimental": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "backend",
+    "coderhouse",
+    "programación",
+    "entrega1",
+    "express"
+  ],
+  "author": "Juan Pablo Addeo <jpaddeo@gmail.com>",
+  "license": "ISC",
+  "packageManager": "pnpm@10.9.0",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

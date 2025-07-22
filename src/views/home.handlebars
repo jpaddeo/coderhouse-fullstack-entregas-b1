@@ -1,0 +1,19 @@
+<h1 class="text-2xl">Productos</h1>
+<hr />
+<div class="products-box">
+    {{#each products}}
+        <hr />
+        <div class="product-card">
+            <h3>{{this.title}}</h3>
+
+            <p>Categoria: {{this.categories}}</p>
+            <p>Descripción: {{this.description}}</p>
+            <p>Precio: $ {{this.price}}</p>
+            <button
+                id="button-delete"
+                onclick="deleteProduct('{{this._id}}')"
+            >Eliminar</button>
+        </div>
+        <hr />
+    {{/each}}
+</div>
