@@ -1,0 +1,61 @@
+<div class='flex items-center justify-between mb-4'>
+  <h1 class='text-2xl'>Productos</h1>
+  <p>Total de productos: {{data.total}}</p>
+</div>
+<hr />
+<div class='flex flex-col gap-4'>
+  {{#if data.success}}
+    <p class='text-green-500'>{{data.message}}</p>
+  {{else}}
+    <p class='text-red-500'>{{data.error}}</p>
+  {{/if}}
+
+  {{#if data.payload.length}}
+    <div class='flex items-center justify-between'>
+      <p>Página {{data.page}} de {{data.totalPages}}</p>
+      <p>Cant. de productos en página
+        {{data.payload.length}}</p>
+      <div class='flex items-center justify-center gap-4'>
+        {{#if data.hasPrevPage}}
+          <a href='?page={{data.prevPage}}'>Anterior</a>
+        {{/if}}
+
+        {{#if data.hasNextPage}}
+          <a href='?page={{data.nextPage}}'>Siguiente</a>
+        {{/if}}
+      </div>
+    </div>
+    {{#each data.payload}}
+      <hr />
+      <div class='product-card'>
+        <h3>{{this.title}}</h3>
+
+        <p>Categoria: {{this.categories}}</p>
+        <p>Descripción: {{this.description}}</p>
+        <p>Precio: $ {{this.price}}</p>
+        <div class='flex items-center justify-end gap-4'>
+          <button
+            onclick='addToCart("{{this._id}}")'
+            class='cursor-pointer bg-green-300 px-2 py-1 rounded hover:bg-green-400 transition-colors'
+          >
+            Agregar al carrito</button>
+          <a href='/products/{{this._id}}'>Ver detalle</a>
+        </div>
+      </div>
+    {{/each}}
+    <hr />
+    <div class='flex items-center justify-between mt-2'>
+      {{#if data.hasPrevPage}}
+        <a href='?page={{data.prevPage}}'>Anterior</a>
+      {{/if}}
+
+      {{#if data.hasNextPage}}
+        <a href='?page={{data.nextPage}}'>Siguiente</a>
+      {{/if}}
+    </div>
+  {{else}}
+    <p>No hay productos para mostrar.</p>
+  {{/if}}
+
+</div>
+<script type='text/javascript' src='/js/products/list.js'></script>

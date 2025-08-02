@@ -1,6 +1,6 @@
-# Programación Backend I: Desarrollo Avanzado de Backend => Entrega 2
+# Programación Backend I: Desarrollo Avanzado de Backend => Entrega FINAL
 
-Detalles de configuración, instalación e implementación LOCAL del proyecto Entrega 2 del curso Programación Backend I: Desarrollo Avanzado de Backend correspondiente a la carrera de Desarrollo Web Fullstack de Coderhouse.
+Detalles de configuración, instalación e implementación LOCAL del proyecto Entrega FINAL del curso Programación Backend I: Desarrollo Avanzado de Backend correspondiente a la carrera de Desarrollo Web Fullstack de Coderhouse.
 
 [CONSIGNA](consigna.md)
 
@@ -22,21 +22,27 @@ cp .env.example .env
 ### Clonar el repositorio:
 
 ```bash
-git clone https://github.com/jpaddeo/coderhouse-fullstack-entregas.git
+git clone https://github.com/jpaddeo/coderhouse-fullstack.git
+```
+
+### Navegar al directorio del proyecto:
+
+```bash
+cd coderhouse-fullstack/backend_1/entrega_final
 ```
 
 ### Instalar las dependencias y ejecutar la aplicación
-
-#### Usando npm
-
-```bash
-npm install && npm run dev
-```
 
 #### Usando pnpm
 
 ```bash
 pnpm install && pnpm dev
+```
+
+#### Usando npm
+
+```bash
+npm install && npm run dev
 ```
 
 ## Estructura de carpetas
@@ -45,19 +51,19 @@ pnpm install && pnpm dev
 entrega1/
 │
 ├── public/
+│   ├── js/
+│     ├── products/
+│     └── home.js
 ├── src/
 │   ├── repositories/
 │   ├── routes/
 │   ├── services/
 │   ├── utils/
-│   ├── views/
-│   └── server-socket.js
 │   └── server.js
 ├── .gitignore
-├── consigna.md
-├── package-lock.json
 ├── package.json
 ├── README.md
+├── CONSIGNA.md
 └── .env.example
 ```
 

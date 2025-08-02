@@ -13,8 +13,7 @@ import productsRouter from './routes/products.js';
 import cartsRouter from './routes/carts.js';
 import viewsRouter from './routes/views.js';
 
-import productsService from './services/products.js';
-import cartsService from './services/carts.js';
+import initServices from './services/init.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -31,22 +30,9 @@ app.use('/api/carts', cartsRouter);
 app.use('/', viewsRouter);
 
 const server = app.listen(PORT, async () => {
+  await initServices();
   console.log(
-    '[INICIO] - Validación y/o creación de archivo de datos de productos.'
-  );
-  await productsService.init();
-  console.log(
-    '[FIN] - Validación y/o creación de archivo de datos de productos.'
-  );
-  console.log(
-    '[INICIO] - Validación y/o creación de archivo de datos de carritos.'
-  );
-  await cartsService.init();
-  console.log(
-    '[FIN] - Validación y/o creación de archivo de datos de carritos.'
-  );
-  console.log(
-    `[SERVER ON] - El servidor de la ENTREGA 2 está ejecutándose en http://localhost:${PORT}`
+    `[SERVER ON] - El servidor de la ENTREGA FINAL  está ejecutándose en ${process.env.BASE_URL}:${PORT}`
   );
 });
 

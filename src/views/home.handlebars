@@ -1,19 +1,27 @@
-<h1 class="text-2xl">Productos</h1>
+<h1 class='text-2xl'>E-Commerce</h1>
 <hr />
-<div class="products-box">
-    {{#each products}}
-        <hr />
-        <div class="product-card">
-            <h3>{{this.title}}</h3>
-
-            <p>Categoria: {{this.categories}}</p>
-            <p>Descripción: {{this.description}}</p>
-            <p>Precio: $ {{this.price}}</p>
-            <button
-                id="button-delete"
-                onclick="deleteProduct('{{this._id}}')"
-            >Eliminar</button>
-        </div>
-        <hr />
-    {{/each}}
+<div class='flex flex-col gap-2 mt-2'>
+  <a
+    href='/products'
+    class='bg-gray-200 rounded px-2 py-1 cursor-pointer hover:bg-gray-300'
+  >Listado de Productos</a>
+  <div>
+    <input
+      type='text'
+      name='cid'
+      placeholder='ID del carrito'
+      class='border-2 rounded-md p-1'
+    />
+    <button
+      type='button'
+      onClick='viewCart()'
+      class='bg-gray-200 rounded px-2 py-1 cursor-pointer'
+    >Ver Carrito</button>
+  </div>
+  <hr />
+  <a
+    href='/realtimeproducts'
+    class='bg-gray-200 rounded px-2 py-1 cursor-pointer hover:bg-gray-300'
+  >Listado de Productos en Tiempo Real (entrega 2)</a>
 </div>
+<script type='text/javascript' src='/js/home.js'></script>

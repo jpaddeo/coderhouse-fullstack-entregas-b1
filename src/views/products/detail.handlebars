@@ -1,0 +1,22 @@
+<div class='flex items-center justify-between mb-4'>
+  <h1 class='text-2xl'>Detalle del Producto {{product._id}}</h1>
+</div>
+<hr />
+<div class='flex flex-col gap-4'>
+  <hr />
+  <div class='product-card'>
+    <h3>{{product.title}}</h3>
+
+    <p>Categoria: {{product.categories}}</p>
+    <p>Descripción: {{product.description}}</p>
+    <p>Precio: $ {{product.price}}</p>
+    <div class='flex items-center justify-end gap-4'>
+      <a
+        href='/products/{{product._id}}'
+        class='cursor-pointer bg-green-300 px-2 py-1 rounded hover:bg-green-400 transition-colors'
+      >
+        Agregar al carrito</a>
+      <a href='/products/{{product._id}}'>Ver detalle</a>
+    </div>
+  </div>
+</div>
